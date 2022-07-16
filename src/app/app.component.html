@@ -2,15 +2,15 @@
   <div class="row">
     <div class="col">
 
-      <h1>The Star Wars Search</h1>
+      <h1>Star Wars WiKi</h1>
       <br>
 
       <app-search-form></app-search-form>
       <br>
 
-      <div *ngIf="isLoading">Loading...</div>
+      <div *ngIf="isLoading">Moving past Light Speed...</div>
 
-      <div *ngIf="isNotFound(searchResult, isLoading)">Not found.</div>
+      <div *ngIf="isNotFound(searchResult, isLoading)">Negative..</div>
 
       <div *ngIf="!isLoading">
         <div *ngIf="searchType === 'people'">

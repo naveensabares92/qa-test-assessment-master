@@ -1,0 +1,10 @@
+.container{
+    height:40em; background-size:cover; width:auto;
+    background-image:url('./assets//images/bgImage.jpg');
+    background-position:50% 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: end;
+    text-rendering: inherit;
+    text-shadow: maroon;
+  }

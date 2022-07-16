@@ -1,7 +1,8 @@
 'use strict';
 
 const APP_CONTENT = {
-    TITLE: `The Star Wars Search`,
+    BG_IMAGE_TITLE: 'MAY THE FORCE BE WITH YOU',
+    TITLE: 'Star Wars WiKi',
 };
 
 module.exports = {
