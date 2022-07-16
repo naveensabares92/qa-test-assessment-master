@@ -1,6 +1,4 @@
 // Protractor configuration file, see link for more information
-// https://github.com/angular/protractor/blob/master/lib/config.ts
-
 exports.config = {
     debug: false,
     allScriptsTimeout: 11000,
@@ -20,7 +18,7 @@ exports.config = {
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     cucumberOpts: {
         require: ['test/steps/*steps.ts'],
-        format: ['json:test-reports/cucumber-test-results.json', 'summary'],
+        format: ['json:test-reports/json/cucumber-test-results.json', 'summary'],
     },
     onPrepare() {
         browser.manage().window().maximize();
@@ -28,4 +26,14 @@ exports.config = {
             project: require('path').join(__dirname, './test/tsconfig.e2e.json'),
         });
     },
+    plugins: [
+        {
+          package: require.resolve('protractor-simple-cucumber-html-reporter-plugin'),
+          options: {
+            reportPath: 'test-reports/html/',
+            openReportInBrowser: false,
+            removeExistingJsonReportFile: true
+          },
+        },
+      ],
 };
