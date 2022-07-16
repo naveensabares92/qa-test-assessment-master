@@ -5,7 +5,7 @@ exports.config = {
   debug: false,
   allScriptsTimeout: 11000,
   specs: [
-    './e2e/features/*.feature'
+    './test/features/*.feature'
   ],
   capabilities: {
     browserName: 'chrome',
@@ -21,7 +21,7 @@ exports.config = {
   framework: 'custom',
   frameworkPath: require.resolve("protractor-cucumber-framework"),
   cucumberOpts: {
-    require: ['e2e/steps/*.steps.ts'],
+    require: ['test/steps/*steps.ts'],
     format: [
       'json:test-reports/cucumber-test-results.json', 'summary'
     ],
@@ -29,7 +29,7 @@ exports.config = {
   onPrepare() {
     browser.manage().window().maximize();
     require('ts-node').register({
-      project: require('path').join(__dirname, './e2e/tsconfig.e2e.json')
+      project: require('path').join(__dirname, './test/tsconfig.e2e.json')
     });
   }
 };
