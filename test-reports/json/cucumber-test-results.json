@@ -1,72 +1,72 @@
 [
-  {
-    "keyword": "Feature",
-    "name": "Check App Default State",
-    "line": 1,
-    "id": "check-app-default-state",
-    "tags": [],
-    "uri": "test/features/app-default-state-check.feature",
-    "elements": [
-      {
-        "id": "check-app-default-state;open-a-browser",
-        "keyword": "Scenario",
-        "line": 3,
-        "name": "Open a browser",
+    {
+        "keyword": "Feature",
+        "name": "Check App Default State",
+        "line": 1,
+        "id": "check-app-default-state",
         "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "App open on \"localhost\"",
-            "match": {
-              "location": "test/steps/starWars.steps.ts:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 722000000
+        "uri": "test/features/app-default-state-check.feature",
+        "elements": [
+            {
+                "id": "check-app-default-state;open-a-browser",
+                "keyword": "Scenario",
+                "line": 3,
+                "name": "Open a browser",
+                "tags": [],
+                "type": "scenario",
+                "steps": [
+                    {
+                        "arguments": [],
+                        "keyword": "Given ",
+                        "line": 4,
+                        "name": "App open on \"localhost\"",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:8"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 722000000
+                        }
+                    },
+                    {
+                        "arguments": [],
+                        "keyword": "When ",
+                        "line": 5,
+                        "name": "Page Title is as expected",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:17"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 52000000
+                        }
+                    },
+                    {
+                        "arguments": [],
+                        "keyword": "Then ",
+                        "line": 6,
+                        "name": "Verify Default state of app",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:22"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 109000000
+                        }
+                    },
+                    {
+                        "keyword": "After",
+                        "hidden": true,
+                        "match": {
+                            "location": "node_modules/@serenity-js/cucumber/src/listeners/legacy/cucumber-4.ts:12"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 12000000
+                        }
+                    }
+                ]
             }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 5,
-            "name": "Page Title is as expected",
-            "match": {
-              "location": "test/steps/starWars.steps.ts:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 52000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 6,
-            "name": "Verify Default state of app",
-            "match": {
-              "location": "test/steps/starWars.steps.ts:22"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 109000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "node_modules/@serenity-js/cucumber/src/listeners/legacy/cucumber-4.ts:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 12000000
-            }
-          }
         ]
-      }
-    ]
-  }
+    }
 ]

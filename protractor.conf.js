@@ -28,12 +28,12 @@ exports.config = {
     },
     plugins: [
         {
-          package: require.resolve('protractor-simple-cucumber-html-reporter-plugin'),
-          options: {
-            reportPath: 'test-reports/html/',
-            openReportInBrowser: false,
-            removeExistingJsonReportFile: true
-          },
+            package: require.resolve('protractor-simple-cucumber-html-reporter-plugin'),
+            options: {
+                reportPath: 'test-reports/html/',
+                openReportInBrowser: false,
+                removeExistingJsonReportFile: true,
+            },
         },
-      ],
+    ],
 };
