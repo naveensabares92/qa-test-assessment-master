@@ -16,7 +16,9 @@ module.exports = class ProtractorAdapter {
     }
 
     find(selector, ctx = null) {
-        return ctx ? ctx.element(protractor.by.css(selector)) : protractor.element(protractor.by.css(selector));
+        return ctx
+            ? ctx.element(protractor.by.css(selector))
+            : protractor.element(protractor.by.css(selector));
     }
 
     findByText(selector, text) {
@@ -40,7 +42,9 @@ module.exports = class ProtractorAdapter {
     }
 
     findAll(selector, ctx = null) {
-        return ctx ? ctx.all(protractor.by.css(selector)) : protractor.element.all(protractor.by.css(selector));
+        return ctx
+            ? ctx.all(protractor.by.css(selector))
+            : protractor.element.all(protractor.by.css(selector));
     }
 
     enterText(selector, text) {
@@ -55,4 +59,4 @@ module.exports = class ProtractorAdapter {
             element.sendKeys(text);
         });
     }
-}
+};

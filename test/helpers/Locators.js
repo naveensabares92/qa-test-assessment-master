@@ -10,7 +10,7 @@ class Locators extends ProtractorAdapter {
     }
 
     getBgImageTitle() {
-        return this.find('#sect1')
+        return this.find('#sect1');
     }
 
     getBgImageTitleText() {
@@ -42,4 +42,4 @@ class Locators extends ProtractorAdapter {
     }
 }
 
-module.exports = { Locators }
+module.exports = { Locators };

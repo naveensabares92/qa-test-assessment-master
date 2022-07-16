@@ -6,20 +6,11 @@ const baseUrl = 'https://swapi.dev/api/';
 
 @Injectable()
 export class ApiService {
+    constructor(private httpClient: HttpClient) {}
 
-  constructor(
-    private httpClient: HttpClient
-  ) {}
+    search(searchType, query): Observable<any> {
+        const params = new HttpParams().set('search', query);
 
-  search(searchType, query): Observable<any> {
-    const params = new HttpParams()
-      .set('search', query);
-
-    return this.httpClient
-      .get(
-        `${baseUrl}${searchType}/`,
-        {params}
-      );
-  }
-
+        return this.httpClient.get(`${baseUrl}${searchType}/`, { params });
+    }
 }
