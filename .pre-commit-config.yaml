@@ -1,0 +1,8 @@
+exclude: '^$'
+fail_fast: false
+repos:
+- repo: https://github.com/naveensabares92/qa-test-assessment-master/main
+  hooks:
+  - id: check-yaml
+  - id: end-of-file-fixer
+  - id: trailing-whitespace

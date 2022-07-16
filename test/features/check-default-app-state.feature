@@ -1,4 +1,4 @@
-Feature: Check App Default State
+Feature: Check Default App State
     
     Scenario: Open a browser
         Given App open on "localhost"
