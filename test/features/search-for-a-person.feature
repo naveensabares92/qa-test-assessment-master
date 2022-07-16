@@ -1,6 +1,7 @@
-Feature: Search for a Person
+Feature: Search a person - Luke Skywalker
     
-    Scenario: Open a browser
+    Scenario: Search a Person and verify details 
         Given App open on "localhost"
-            When Page Title is as expected
-                Then Verify Default state of app
+            When Select option People if not selected
+                When I search the "person" as "Luke Skywalker"
+                    Then Verify details of "Luke Skywalker"

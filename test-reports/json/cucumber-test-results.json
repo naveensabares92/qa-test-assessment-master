@@ -1,14 +1,14 @@
 [
     {
         "keyword": "Feature",
-        "name": "Check App Default State",
+        "name": "Check Default App State",
         "line": 1,
-        "id": "check-app-default-state",
+        "id": "check-default-app-state",
         "tags": [],
-        "uri": "test/features/app-default-state-check.feature",
+        "uri": "test/features/check-default-app-state.feature",
         "elements": [
             {
-                "id": "check-app-default-state;open-a-browser",
+                "id": "check-default-app-state;open-a-browser",
                 "keyword": "Scenario",
                 "line": 3,
                 "name": "Open a browser",
@@ -25,7 +25,7 @@
                         },
                         "result": {
                             "status": "passed",
-                            "duration": 722000000
+                            "duration": 723000000
                         }
                     },
                     {
@@ -38,7 +38,7 @@
                         },
                         "result": {
                             "status": "passed",
-                            "duration": 52000000
+                            "duration": 51000000
                         }
                     },
                     {
@@ -52,6 +52,338 @@
                         "result": {
                             "status": "passed",
                             "duration": 109000000
+                        }
+                    },
+                    {
+                        "keyword": "After",
+                        "hidden": true,
+                        "match": {
+                            "location": "node_modules/@serenity-js/cucumber/src/listeners/legacy/cucumber-4.ts:12"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 11000000
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "keyword": "Feature",
+        "name": "Search a person - Unavailable",
+        "line": 1,
+        "id": "search-a-person---unavailable",
+        "tags": [],
+        "uri": "test/features/search-for-a-person-unavailable.feature",
+        "elements": [
+            {
+                "id": "search-a-person---unavailable;search-a-person-and-verify-details",
+                "keyword": "Scenario",
+                "line": 3,
+                "name": "Search a Person and verify details",
+                "tags": [],
+                "type": "scenario",
+                "steps": [
+                    {
+                        "arguments": [],
+                        "keyword": "Given ",
+                        "line": 4,
+                        "name": "App open on \"localhost\"",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:8"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 607000000
+                        }
+                    },
+                    {
+                        "arguments": [],
+                        "keyword": "When ",
+                        "line": 5,
+                        "name": "Select option People if not selected",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:49"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 82000000
+                        }
+                    },
+                    {
+                        "arguments": [],
+                        "keyword": "When ",
+                        "line": 6,
+                        "name": "I search the \"person\" as \"Mithrandir\"",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:69"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 814000000
+                        }
+                    },
+                    {
+                        "arguments": [],
+                        "keyword": "Then ",
+                        "line": 7,
+                        "name": "Verify Not Found message",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:84"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 25000000
+                        }
+                    },
+                    {
+                        "keyword": "After",
+                        "hidden": true,
+                        "match": {
+                            "location": "node_modules/@serenity-js/cucumber/src/listeners/legacy/cucumber-4.ts:12"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 11000000
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "keyword": "Feature",
+        "name": "Search a person - Luke Skywalker",
+        "line": 1,
+        "id": "search-a-person---luke-skywalker",
+        "tags": [],
+        "uri": "test/features/search-for-a-person.feature",
+        "elements": [
+            {
+                "id": "search-a-person---luke-skywalker;search-a-person-and-verify-details",
+                "keyword": "Scenario",
+                "line": 3,
+                "name": "Search a Person and verify details",
+                "tags": [],
+                "type": "scenario",
+                "steps": [
+                    {
+                        "arguments": [],
+                        "keyword": "Given ",
+                        "line": 4,
+                        "name": "App open on \"localhost\"",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:8"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 410000000
+                        }
+                    },
+                    {
+                        "arguments": [],
+                        "keyword": "When ",
+                        "line": 5,
+                        "name": "Select option People if not selected",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:49"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 77000000
+                        }
+                    },
+                    {
+                        "arguments": [],
+                        "keyword": "When ",
+                        "line": 6,
+                        "name": "I search the \"person\" as \"Luke Skywalker\"",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:69"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 315000000
+                        }
+                    },
+                    {
+                        "arguments": [],
+                        "keyword": "Then ",
+                        "line": 7,
+                        "name": "Verify details of \"Luke Skywalker\"",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:77"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 25000000
+                        }
+                    },
+                    {
+                        "keyword": "After",
+                        "hidden": true,
+                        "match": {
+                            "location": "node_modules/@serenity-js/cucumber/src/listeners/legacy/cucumber-4.ts:12"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 12000000
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "keyword": "Feature",
+        "name": "Search a planet - Unavailable",
+        "line": 1,
+        "id": "search-a-planet---unavailable",
+        "tags": [],
+        "uri": "test/features/search-for-a-planet-unavailable.feature",
+        "elements": [
+            {
+                "id": "search-a-planet---unavailable;search-a-planet-and-verify-details",
+                "keyword": "Scenario",
+                "line": 3,
+                "name": "Search a Planet and verify details",
+                "tags": [],
+                "type": "scenario",
+                "steps": [
+                    {
+                        "arguments": [],
+                        "keyword": "Given ",
+                        "line": 4,
+                        "name": "App open on \"localhost\"",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:8"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 566000000
+                        }
+                    },
+                    {
+                        "arguments": [],
+                        "keyword": "When ",
+                        "line": 5,
+                        "name": "Select option Planet if not selected",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:59"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 76000000
+                        }
+                    },
+                    {
+                        "arguments": [],
+                        "keyword": "When ",
+                        "line": 6,
+                        "name": "I search the \"Planet\" as \"Earth 616\"",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:69"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 370000000
+                        }
+                    },
+                    {
+                        "arguments": [],
+                        "keyword": "Then ",
+                        "line": 7,
+                        "name": "Verify Not Found message",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:84"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 29000000
+                        }
+                    },
+                    {
+                        "keyword": "After",
+                        "hidden": true,
+                        "match": {
+                            "location": "node_modules/@serenity-js/cucumber/src/listeners/legacy/cucumber-4.ts:12"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 11000000
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "keyword": "Feature",
+        "name": "Search a planet - Naboo",
+        "line": 1,
+        "id": "search-a-planet---naboo",
+        "tags": [],
+        "uri": "test/features/search-for-a-planet.feature",
+        "elements": [
+            {
+                "id": "search-a-planet---naboo;search-a-planet-and-verify-details",
+                "keyword": "Scenario",
+                "line": 3,
+                "name": "Search a Planet and verify details",
+                "tags": [],
+                "type": "scenario",
+                "steps": [
+                    {
+                        "arguments": [],
+                        "keyword": "Given ",
+                        "line": 4,
+                        "name": "App open on \"localhost\"",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:8"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 572000000
+                        }
+                    },
+                    {
+                        "arguments": [],
+                        "keyword": "When ",
+                        "line": 5,
+                        "name": "Select option Planet if not selected",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:59"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 78000000
+                        }
+                    },
+                    {
+                        "arguments": [],
+                        "keyword": "When ",
+                        "line": 6,
+                        "name": "I search the \"Planet\" as \"Naboo\"",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:69"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 371000000
+                        }
+                    },
+                    {
+                        "arguments": [],
+                        "keyword": "Then ",
+                        "line": 7,
+                        "name": "Verify details of \"Naboo\"",
+                        "match": {
+                            "location": "test/steps/starWars.steps.ts:77"
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 24000000
                         }
                     },
                     {

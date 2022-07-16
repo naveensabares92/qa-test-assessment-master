@@ -37,6 +37,10 @@ module.exports = class ProtractorAdapter {
         return protractor.element.all(protractor.by.id(id));
     }
 
+    findByXpath(xpath) {
+        return protractor.element.all(protractor.by.xpath(xpath));
+    }
+
     findByModel(selector) {
         return protractor.element(protractor.by.model(selector));
     }
@@ -47,16 +51,16 @@ module.exports = class ProtractorAdapter {
             : protractor.element.all(protractor.by.css(selector));
     }
 
-    enterText(selector, text) {
-        const input = this.getElementWhenPresent(selector);
-        return protractor.browser.controlFlow().execute(() => {
-            input.sendKeys(text);
-        });
+    async enterText(selector, text) {
+        const input = this.find(selector);
+        await input.sendKeys(text);
     }
 
-    async enterTextByElement(element, text) {
-        return protractor.browser.controlFlow().execute(() => {
-            element.sendKeys(text);
-        });
+    waitForElementToBePresent(element) {
+        protractor.browser.wait(
+            protractor.ExpectedConditions.presenceOf(element),
+            15000,
+            'Element not found'
+        );
     }
 };

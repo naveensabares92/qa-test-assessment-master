@@ -29,7 +29,7 @@ class Locators extends ProtractorAdapter {
         return this.find('#planets');
     }
 
-    getPeopleRadioButtonText() {
+    getPlanetsRadioButtonText() {
         return this.find('[for="planets"]');
     }
 
@@ -39,6 +39,20 @@ class Locators extends ProtractorAdapter {
 
     getSubmitButton() {
         return this.find('button[type="submit"]');
+    }
+
+    getSearchResultTitles() {
+        return this.findAll('h6.card-subtitle');
+    }
+
+    getFirstSearchResultTitle() {
+        return this.getSearchResultTitles().get(0);
+    }
+
+    getResultNotFound() {
+        return this.findByXpath(
+            '//app-search-form/following-sibling::div[contains(text(),"Negative")]'
+        );
     }
 }
 
