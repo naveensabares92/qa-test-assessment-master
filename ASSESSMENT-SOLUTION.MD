@@ -8,7 +8,7 @@
 # **🚚 Fedex's QA Assessment**
 # Solution By Name: Naveen Sabares B, India | +91 - 98417 46095
 ## **🪔 Introduction**
-This test framework is enhanced as a part of QA assessment using Cucumber, JavaScript & TypeScript. 
+This test framework is enhanced as a part of QA assessment using Cucumber, JavaScript & TypeScript. Used the "protractor-cucumber-framework" package to write, configure & run tests. 
 ### **End to End testing suite using**
 1. Cucumber https://cucumber.io/
 2. JavaScript https://www.javascript.com/
