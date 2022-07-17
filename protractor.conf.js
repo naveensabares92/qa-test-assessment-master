@@ -18,7 +18,7 @@ exports.config = {
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     cucumberOpts: {
         require: ['test/steps/*steps.ts'],
-        format: ['json:test-reports/json/cucumber-test-results.json', 'summary'],
+        format: ['json:test/test-reports/json/cucumber-test-results.json', 'summary'],
     },
     onPrepare() {
         browser.manage().window().maximize();
@@ -30,8 +30,8 @@ exports.config = {
         {
             package: require.resolve('protractor-simple-cucumber-html-reporter-plugin'),
             options: {
-                reportPath: 'test-reports/html/',
-                openReportInBrowser: false,
+                reportPath: 'test/test-reports/html/',
+                openReportInBrowser: true,
                 removeExistingJsonReportFile: true,
             },
         },

@@ -15,10 +15,8 @@ module.exports = class ProtractorAdapter {
         this.promise = promise;
     }
 
-    find(selector, ctx = null) {
-        return ctx
-            ? ctx.element(protractor.by.css(selector))
-            : protractor.element(protractor.by.css(selector));
+    find(selector) {
+        return protractor.element(protractor.by.css(selector));
     }
 
     findByText(selector, text) {
@@ -45,10 +43,8 @@ module.exports = class ProtractorAdapter {
         return protractor.element(protractor.by.model(selector));
     }
 
-    findAll(selector, ctx = null) {
-        return ctx
-            ? ctx.all(protractor.by.css(selector))
-            : protractor.element.all(protractor.by.css(selector));
+    findAll(selector) {
+        return protractor.element.all(protractor.by.css(selector));
     }
 
     async enterText(selector, text) {
@@ -62,5 +58,9 @@ module.exports = class ProtractorAdapter {
             15000,
             'Element not found'
         );
+    }
+
+    tapEnterKeyBySelector(selector) {
+        selector.sendKeys(protractor.Key.ENTER);
     }
 };
